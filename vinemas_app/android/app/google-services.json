@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "406249002789",
+    "project_id": "fir-tutorial-d4b6f",
+    "storage_bucket": "fir-tutorial-d4b6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406249002789:android:2698030bf792ca96202ccc",
+        "android_client_info": {
+          "package_name": "com.example.vinemas_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406249002789-jkg26o3qijc5plqif5tb762khbvvl9ci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vinemas_app",
+            "certificate_hash": "714aaa1eaee46bbb838cea8414087910d2a0166a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaJ1KcnTKgxqRQCfToedhGtcM9OchJKIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406249002789-323cjba25iuk8daou06gdpi22chcut68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.vinemasApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

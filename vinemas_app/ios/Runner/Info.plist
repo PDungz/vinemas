@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>Vinemas</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>vinemas_app</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+
+    <!-- Google Sign-In Configuration -->
+    <key>GIDClientID</key>
+    <string>406249002789-323cjba25iuk8daou06gdpi22chcut68.apps.googleusercontent.com</string>
+    <key>GoogleService-Info</key>
+    <string>$(PROJECT_DIR)/Runner/GoogleService-Info.plist</string>
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb9205669889562732</string>
+                <string>com.googleusercontent.apps.406249002789-323cjba25iuk8daou06gdpi22chcut68</string>
+            </array>
+        </dict>
+    </array>
+    <!-- Facebook Configuration -->
+    <key>FacebookAppID</key>
+    <string>9205669889562732</string>
+    <key>FacebookClientToken</key>
+    <string>19ec4d2cdea78c7c6853208fbe33f19a</string>
+    <key>FacebookDisplayName</key>
+    <string>vinemas</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+    </array>
+
+    <key>NSUserTrackingUsageDescription</key>
+    <string>The app requires this permission to provide a better experience.</string>
+
+
+    <!-- Facebook Authentication Configuration -->
+    <key>FacebookAutoLogAppEventsEnabled</key>
+    <true/>
+    <key>FacebookAdvertiserIDCollectionEnabled</key>
+    <true/>
+    <key>FacebookAutoInitEnabled</key>
+    <true/>
+    <key>FacebookLoginAuthType</key>
+    <string>reauthorize</string>
+
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>googlechrome</string>
+        <string>com.google.chrome.ios</string>
+        <string>google</string>
+        <string>googlechrome-universal-link</string>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+    </array>
+    
+</dict>
+</plist>

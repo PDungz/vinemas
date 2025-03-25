@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>406249002789-323cjba25iuk8daou06gdpi22chcut68.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.406249002789-323cjba25iuk8daou06gdpi22chcut68</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>406249002789-jkg26o3qijc5plqif5tb762khbvvl9ci.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDz9N2Z16XAcNjdIrH80o5yDJuOtULdhNY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>406249002789</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.vinemasApp</string>
+	<key>PROJECT_ID</key>
+	<string>fir-tutorial-d4b6f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-tutorial-d4b6f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:406249002789:ios:784d6cb94b3abc5e202ccc</string>
+</dict>
+</plist>

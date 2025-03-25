@@ -1,0 +1,23 @@
+import 'package:dio/dio.dart';
+import 'package:vinemas_app/core/api/dio_interceptor/logging_interceptor.dart';
+import 'package:vinemas_app/core/api/dio_interceptor/token_interceptor.dart';
+import 'package:vinemas_app/core/config/app_url.dart';
+
+class DioClient {
+  late Dio dio;
+
+  DioClient() {
+    initDio();
+  }
+
+  void initDio() {
+    dio = Dio();
+    dio.options = BaseOptions(
+      baseUrl: AppUrl.apiHost + AppUrl.versionApi,
+      receiveTimeout: Duration(seconds: 20),
+      connectTimeout: Duration(seconds: 20),
+    );
+    dio.interceptors.add(LoggingInterceptor());
+    dio.interceptors.add(TokenInterceptor());
+  }
+}
