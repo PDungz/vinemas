@@ -299,7 +299,7 @@ seat_id VARCHAR(50),
 PRIMARY KEY (ticket_id, seat_id),
 FOREIGN KEY (ticket_id) REFERENCES Ticket(ticket_id)
 );
-```
+``
 
 ## 6.11 Payment
 ```sql
