@@ -402,3 +402,218 @@
 2025-04-01 19:53:32 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m59s872ms).
 2025-04-01 20:11:28 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m25s734ms).
 2025-04-01 21:14:41 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m11s955ms).
+2025-04-01 22:08:19 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 22:08:19 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 22:08:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 22:08:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 22:08:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 22:42:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 22:42:24 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 8603 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 22:42:24 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 22:42:24 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 22:42:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 22:42:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 22:42:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 22:42:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2025-04-01 22:42:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 22:42:25 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 22:42:25 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 22:42:25 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 22:42:25 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 22:42:25 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 462 ms
+2025-04-01 22:42:25 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 22:42:25 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 22:42:25 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 22:42:25 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 22:42:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 22:42:25 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53dced34
+2025-04-01 22:42:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 22:42:25 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 22:42:25 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 22:42:25 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 22:42:25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 22:42:25 [restartedMain] DEBUG org.hibernate.SQL - create table chair_types (chair_type_id bigint not null auto_increment, seat_row varchar(5) not null, seat_type_name varchar(50) not null, chair_config_id bigint not null, primary key (chair_type_id)) engine=InnoDB
+2025-04-01 22:42:25 [restartedMain] DEBUG org.hibernate.SQL - alter table chair_types add constraint FKh68k8dky4bbf1cgbmu7c0htuy foreign key (chair_config_id) references chair_configs (chair_config_id)
+2025-04-01 22:42:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 22:42:25 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 22:42:25 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 22:42:25 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 22:42:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 22:42:25 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.384 seconds (process running for 1.616)
+2025-04-01 22:42:35 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 22:42:35 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 22:42:35 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-01 22:42:35 [http-nio-8080-exec-2] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairTypes - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: a11c2024-955f-4db3-8248-1d11e74a3cbf, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 22:42:36 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select ct1_0.chair_type_id,ct1_0.chair_config_id,ct1_0.seat_row,ct1_0.seat_type_name from chair_types ct1_0
+2025-04-01 22:42:36 [http-nio-8080-exec-2] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairTypes - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 22:49:31 [http-nio-8080-exec-5] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairTypes - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: d48ba513-3001-4308-9d16-5b675504f782, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 22:49:31 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select ct1_0.chair_type_id,ct1_0.chair_config_id,ct1_0.seat_row,ct1_0.seat_type_name from chair_types ct1_0
+2025-04-01 22:49:31 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0 where cc1_0.chair_config_id=?
+2025-04-01 22:49:31 [http-nio-8080-exec-5] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairTypes - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 23:23:01 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 23:23:01 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 23:23:01 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 23:23:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 23:23:01 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 23:23:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 23:23:02 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 8888 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 23:23:02 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 23:23:02 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 23:23:02 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 23:23:02 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 23:23:03 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 23:23:03 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 23:23:03 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 23:23:03 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 431 ms
+2025-04-01 23:23:03 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 23:23:03 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 23:23:03 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 23:23:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 23:23:03 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@415c46fd
+2025-04-01 23:23:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 23:23:03 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 23:23:03 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 23:23:03 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 23:23:03 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 23:23:03 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-01 23:23:04 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 23:23:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 23:23:04 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 23:23:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 23:23:04 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.567 seconds (process running for 1.781)
+2025-04-01 23:23:15 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 23:23:15 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 23:23:15 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-01 23:23:15 [http-nio-8080-exec-2] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairConfig - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: f6778077-0a9b-4ee8-832c-e12a8ff22ce2, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 23:23:15 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource chairConfig.]
+2025-04-01 23:23:15 [http-nio-8080-exec-2] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairConfig - Status: 500 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 23:23:19 [http-nio-8080-exec-5] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairConfigs - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: 2b0ca6c1-738b-4307-ab24-3306827f0e71, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 23:23:19 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01 23:23:19 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select ct1_0.chair_config_id,ct1_0.chair_type_id,ct1_0.seat_row,ct1_0.seat_type_name from chair_types ct1_0 where ct1_0.chair_config_id=?
+2025-04-01 23:23:19 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-04-01 23:23:19 [http-nio-8080-exec-5] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairConfigs - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 23:24:17 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 23:24:17 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 23:24:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 23:24:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 23:24:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 23:24:19 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 23:24:19 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 8903 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 23:24:19 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 23:24:19 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 23:24:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 23:24:19 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 23:24:19 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 23:24:19 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 462 ms
+2025-04-01 23:24:19 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 23:24:19 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 23:24:19 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 23:24:19 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 23:24:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 23:24:19 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e363f15
+2025-04-01 23:24:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 23:24:20 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 23:24:20 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 23:24:20 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 23:24:20 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 23:24:20 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 23:24:20 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 23:24:20 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 23:24:20 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 23:24:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 23:24:20 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.411 seconds (process running for 1.652)
+2025-04-01 23:24:25 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 23:24:25 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 23:24:25 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-01 23:24:25 [http-nio-8080-exec-2] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairConfigs - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: cf54e082-2d02-4af4-b67e-abdb5a977227, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 23:24:25 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01 23:24:25 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select ct1_0.chair_config_id,ct1_0.chair_type_id,ct1_0.seat_row,ct1_0.seat_type_name from chair_types ct1_0 where ct1_0.chair_config_id=?
+2025-04-01 23:24:25 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-04-01 23:24:25 [http-nio-8080-exec-2] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairConfigs - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 23:24:28 [http-nio-8080-exec-3] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairConfigs - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: 2f105487-ba3d-4d5a-a3e3-5cf27c662356, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 23:24:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01 23:24:28 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select ct1_0.chair_config_id,ct1_0.chair_type_id,ct1_0.seat_row,ct1_0.seat_type_name from chair_types ct1_0 where ct1_0.chair_config_id=?
+2025-04-01 23:24:28 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-04-01 23:24:28 [http-nio-8080-exec-3] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairConfigs - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 23:24:51 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 23:24:51 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 23:24:51 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 23:24:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 23:24:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 23:24:52 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 23:24:53 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 8918 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 23:24:53 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 23:24:53 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 23:24:53 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 23:24:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 23:24:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 23:24:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 471 ms
+2025-04-01 23:24:53 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 23:24:53 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 23:24:53 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 23:24:53 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 23:24:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 23:24:53 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a8b290c
+2025-04-01 23:24:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 23:24:53 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 23:24:53 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 23:24:53 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 23:24:54 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 23:24:54 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 23:24:54 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 23:24:54 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 23:24:54 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 23:24:54 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 23:24:54 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.47 seconds (process running for 1.722)
+2025-04-01 23:25:13 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 23:25:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 23:25:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-04-01 23:25:13 [http-nio-8080-exec-1] INFO  c.e.v.i.i.LoggingInterceptor - Request: [GET] /chairConfigs - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: 7eee28f5-422e-4ba2-a093-d2fe28f5eeec, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 561 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 23:25:13 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01 23:25:13 [http-nio-8080-exec-1] INFO  c.e.v.i.i.LoggingInterceptor - Response: [GET] /chairConfigs - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
