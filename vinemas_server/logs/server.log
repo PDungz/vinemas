@@ -1,0 +1,404 @@
+2025-04-01T17:12:28.594+07:00  INFO 5855 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Starting VinemasServerApplication using Java 21.0.6 with PID 5855 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01T17:12:28.595+07:00 DEBUG 5855 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01T17:12:28.595+07:00  INFO 5855 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-04-01T17:12:28.620+07:00  INFO 5855 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01T17:12:28.620+07:00  INFO 5855 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01T17:12:28.859+07:00  INFO 5855 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01T17:12:28.882+07:00  INFO 5855 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+2025-04-01T17:12:29.023+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-01T17:12:29.028+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-01T17:12:29.028+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01T17:12:29.042+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-01T17:12:29.043+07:00  INFO 5855 --- [vinemas_server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 421 ms
+2025-04-01T17:12:29.090+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01T17:12:29.105+07:00  INFO 5855 --- [vinemas_server] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01T17:12:29.114+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-01T17:12:29.188+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01T17:12:29.196+07:00  INFO 5855 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-01T17:12:29.245+07:00  INFO 5855 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2288f678
+2025-04-01T17:12:29.246+07:00  INFO 5855 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-01T17:12:29.261+07:00  WARN 5855 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01T17:12:29.261+07:00  WARN 5855 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01T17:12:29.266+07:00  INFO 5855 --- [vinemas_server] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01T17:12:29.555+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01T17:12:29.574+07:00  INFO 5855 --- [vinemas_server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:12:29.699+07:00  WARN 5855 --- [vinemas_server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01T17:12:29.874+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-01T17:12:29.891+07:00  INFO 5855 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-01T17:12:29.897+07:00  INFO 5855 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Started VinemasServerApplication in 1.469 seconds (process running for 1.617)
+2025-04-01T17:12:36.888+07:00  INFO 5855 --- [vinemas_server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01T17:12:36.888+07:00  INFO 5855 --- [vinemas_server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-01T17:12:36.889+07:00  INFO 5855 --- [vinemas_server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-01T17:12:36.945+07:00 DEBUG 5855 --- [vinemas_server] [http-nio-8080-exec-1] org.hibernate.SQL                        : select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01T17:19:20.251+07:00  INFO 5948 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Starting VinemasServerApplication using Java 21.0.6 with PID 5948 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01T17:19:20.252+07:00 DEBUG 5948 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01T17:19:20.252+07:00  INFO 5948 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-04-01T17:19:20.279+07:00  INFO 5948 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01T17:19:20.280+07:00  INFO 5948 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01T17:19:20.548+07:00  INFO 5948 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01T17:19:20.572+07:00  INFO 5948 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2025-04-01T17:19:20.716+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-01T17:19:20.721+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-01T17:19:20.721+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01T17:19:20.736+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-01T17:19:20.736+07:00  INFO 5948 --- [vinemas_server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 456 ms
+2025-04-01T17:19:20.789+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01T17:19:20.804+07:00  INFO 5948 --- [vinemas_server] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01T17:19:20.813+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-01T17:19:20.887+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01T17:19:20.896+07:00  INFO 5948 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-01T17:19:20.948+07:00  INFO 5948 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39403bad
+2025-04-01T17:19:20.948+07:00  INFO 5948 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-01T17:19:20.964+07:00  WARN 5948 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01T17:19:20.965+07:00  WARN 5948 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01T17:19:20.970+07:00  INFO 5948 --- [vinemas_server] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01T17:19:21.225+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01T17:19:21.242+07:00  INFO 5948 --- [vinemas_server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:19:21.337+07:00  WARN 5948 --- [vinemas_server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01T17:19:21.445+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-01T17:19:21.456+07:00  INFO 5948 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-01T17:19:21.461+07:00  INFO 5948 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Started VinemasServerApplication in 1.39 seconds (process running for 1.547)
+2025-04-01T17:19:28.064+07:00  INFO 5948 --- [vinemas_server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01T17:19:28.064+07:00  INFO 5948 --- [vinemas_server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-01T17:19:28.065+07:00  INFO 5948 --- [vinemas_server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-01T17:19:28.121+07:00 DEBUG 5948 --- [vinemas_server] [http-nio-8080-exec-1] org.hibernate.SQL                        : select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01T17:23:04.990+07:00  INFO 5948 --- [vinemas_server] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01T17:23:04.993+07:00  INFO 5948 --- [vinemas_server] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-01T17:23:04.995+07:00  INFO 5948 --- [vinemas_server] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:23:04.997+07:00  INFO 5948 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-01T17:23:05.001+07:00  INFO 5948 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-01T17:23:06.073+07:00  INFO 5961 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Starting VinemasServerApplication using Java 21.0.6 with PID 5961 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01T17:23:06.074+07:00 DEBUG 5961 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01T17:23:06.075+07:00  INFO 5961 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-04-01T17:23:06.099+07:00  INFO 5961 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01T17:23:06.099+07:00  INFO 5961 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01T17:23:06.373+07:00  INFO 5961 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01T17:23:06.397+07:00  INFO 5961 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2025-04-01T17:23:06.564+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-01T17:23:06.569+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-01T17:23:06.569+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01T17:23:06.580+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-01T17:23:06.580+07:00  INFO 5961 --- [vinemas_server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 481 ms
+2025-04-01T17:23:06.638+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01T17:23:06.651+07:00  INFO 5961 --- [vinemas_server] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01T17:23:06.660+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-01T17:23:06.740+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01T17:23:06.748+07:00  INFO 5961 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-01T17:23:06.807+07:00  INFO 5961 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30c303f7
+2025-04-01T17:23:06.808+07:00  INFO 5961 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-01T17:23:06.828+07:00  WARN 5961 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01T17:23:06.828+07:00  WARN 5961 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01T17:23:06.836+07:00  INFO 5961 --- [vinemas_server] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01T17:23:07.135+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01T17:23:07.152+07:00  INFO 5961 --- [vinemas_server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:23:07.246+07:00  WARN 5961 --- [vinemas_server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01T17:23:07.369+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-01T17:23:07.380+07:00  INFO 5961 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-01T17:23:07.384+07:00  INFO 5961 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Started VinemasServerApplication in 1.573 seconds (process running for 1.762)
+2025-04-01T17:29:15.257+07:00  INFO 5961 --- [vinemas_server] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01T17:29:15.261+07:00  INFO 5961 --- [vinemas_server] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-01T17:29:15.264+07:00  INFO 5961 --- [vinemas_server] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:29:15.266+07:00  INFO 5961 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-01T17:29:15.270+07:00  INFO 5961 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-01T17:29:16.189+07:00  INFO 6006 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Starting VinemasServerApplication using Java 21.0.6 with PID 6006 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01T17:29:16.190+07:00 DEBUG 6006 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01T17:29:16.190+07:00  INFO 6006 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-04-01T17:29:16.211+07:00  INFO 6006 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01T17:29:16.211+07:00  INFO 6006 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01T17:29:16.456+07:00  INFO 6006 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01T17:29:16.479+07:00  INFO 6006 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2025-04-01T17:29:16.664+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-01T17:29:16.669+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-01T17:29:16.669+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01T17:29:16.684+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-01T17:29:16.684+07:00  INFO 6006 --- [vinemas_server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 472 ms
+2025-04-01T17:29:16.729+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01T17:29:16.742+07:00  INFO 6006 --- [vinemas_server] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01T17:29:16.750+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-01T17:29:16.822+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01T17:29:16.831+07:00  INFO 6006 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-01T17:29:16.884+07:00  INFO 6006 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43a75629
+2025-04-01T17:29:16.885+07:00  INFO 6006 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-01T17:29:16.901+07:00  WARN 6006 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01T17:29:16.902+07:00  WARN 6006 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01T17:29:16.908+07:00  INFO 6006 --- [vinemas_server] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01T17:29:17.185+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01T17:29:17.204+07:00  INFO 6006 --- [vinemas_server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:29:17.298+07:00  WARN 6006 --- [vinemas_server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01T17:29:17.412+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-01T17:29:17.423+07:00  INFO 6006 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-01T17:29:17.427+07:00  INFO 6006 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Started VinemasServerApplication in 1.421 seconds (process running for 1.587)
+2025-04-01T17:29:21.783+07:00  INFO 6006 --- [vinemas_server] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01T17:29:21.783+07:00  INFO 6006 --- [vinemas_server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-01T17:29:21.784+07:00  INFO 6006 --- [vinemas_server] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-01T17:29:21.839+07:00 DEBUG 6006 --- [vinemas_server] [http-nio-8080-exec-1] org.hibernate.SQL                        : select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01T17:30:05.616+07:00 DEBUG 6006 --- [vinemas_server] [http-nio-8080-exec-5] org.hibernate.SQL                        : select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0
+2025-04-01T17:30:18.754+07:00 DEBUG 6006 --- [vinemas_server] [http-nio-8080-exec-6] org.hibernate.SQL                        : select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0 where cc1_0.chair_config_id=?
+2025-04-01T17:33:46.355+07:00  INFO 6006 --- [vinemas_server] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01T17:33:46.358+07:00  INFO 6006 --- [vinemas_server] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-01T17:33:46.360+07:00  INFO 6006 --- [vinemas_server] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:33:46.362+07:00  INFO 6006 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-01T17:33:46.365+07:00  INFO 6006 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-01T17:34:48.989+07:00  INFO 6120 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Starting VinemasServerApplication using Java 21.0.6 with PID 6120 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01T17:34:48.990+07:00 DEBUG 6120 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01T17:34:48.990+07:00  INFO 6120 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-04-01T17:34:49.009+07:00  INFO 6120 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01T17:34:49.009+07:00  INFO 6120 --- [vinemas_server] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01T17:34:49.261+07:00  INFO 6120 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01T17:34:49.289+07:00  INFO 6120 --- [vinemas_server] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2025-04-01T17:34:49.461+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-01T17:34:49.466+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-01T17:34:49.466+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01T17:34:49.479+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-01T17:34:49.479+07:00  INFO 6120 --- [vinemas_server] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 469 ms
+2025-04-01T17:34:49.538+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01T17:34:49.553+07:00  INFO 6120 --- [vinemas_server] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01T17:34:49.562+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-01T17:34:49.645+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01T17:34:49.654+07:00  INFO 6120 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-01T17:34:49.717+07:00  INFO 6120 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@91b9b68
+2025-04-01T17:34:49.718+07:00  INFO 6120 --- [vinemas_server] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-01T17:34:49.736+07:00  WARN 6120 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01T17:34:49.737+07:00  WARN 6120 --- [vinemas_server] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01T17:34:49.743+07:00  INFO 6120 --- [vinemas_server] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01T17:34:49.992+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01T17:34:50.010+07:00  INFO 6120 --- [vinemas_server] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:34:50.123+07:00  WARN 6120 --- [vinemas_server] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01T17:34:50.248+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-01T17:34:50.259+07:00  INFO 6120 --- [vinemas_server] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-01T17:34:50.265+07:00  INFO 6120 --- [vinemas_server] [restartedMain] c.e.v.VinemasServerApplication           : Started VinemasServerApplication in 1.467 seconds (process running for 1.631)
+2025-04-01T17:34:55.564+07:00  INFO 6120 --- [vinemas_server] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01T17:34:55.564+07:00  INFO 6120 --- [vinemas_server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-01T17:34:55.565+07:00  INFO 6120 --- [vinemas_server] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-01T17:34:55.617+07:00 DEBUG 6120 --- [vinemas_server] [http-nio-8080-exec-2] org.hibernate.SQL                        : select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0 where cc1_0.chair_config_id=?
+2025-04-01T17:35:20.870+07:00  INFO 6120 --- [vinemas_server] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01T17:35:20.873+07:00  INFO 6120 --- [vinemas_server] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-01T17:35:20.879+07:00  INFO 6120 --- [vinemas_server] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01T17:35:20.880+07:00  INFO 6120 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-01T17:35:20.883+07:00  INFO 6120 --- [vinemas_server] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-01 18:13:32 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 18:13:32 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 7021 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 18:13:32 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 18:13:32 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 18:13:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 18:13:32 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 18:13:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 18:13:32 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2025-04-01 18:13:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 18:13:33 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:13:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 18:13:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 18:13:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 18:13:33 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 478 ms
+2025-04-01 18:13:33 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 18:13:33 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 18:13:33 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 18:13:33 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 18:13:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 18:13:33 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fb7627b
+2025-04-01 18:13:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 18:13:33 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 18:13:33 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 18:13:33 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 18:13:33 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 18:13:33 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:13:33 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 18:13:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 18:13:33 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:13:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 18:13:33 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.473 seconds (process running for 1.743)
+2025-04-01 18:14:00 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 18:14:00 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 18:14:00 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:14:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 18:14:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 18:14:01 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 18:14:01 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 7030 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 18:14:01 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 18:14:01 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 18:14:01 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 18:14:01 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 18:14:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 18:14:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2025-04-01 18:14:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 18:14:01 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:14:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 18:14:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 18:14:01 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 18:14:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 489 ms
+2025-04-01 18:14:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 18:14:02 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 18:14:02 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 18:14:02 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 18:14:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 18:14:02 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5dc2f8de
+2025-04-01 18:14:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 18:14:02 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 18:14:02 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 18:14:02 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 18:14:02 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 18:14:02 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:14:02 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 18:14:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 18:14:02 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:14:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 18:14:02 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.439 seconds (process running for 1.647)
+2025-04-01 18:14:06 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 18:14:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 18:14:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-04-01 18:14:06 [http-nio-8080-exec-1] INFO  c.e.v.i.i.LoggingInterceptor - 📥 Incoming Request: [PUT] /chairConfigs/1 - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: cd77b4ee-10f2-4dfd-a52c-78dc3e6c9df7, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 75 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 18:14:06 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0 where cc1_0.chair_config_id=?
+2025-04-01 18:14:06 [http-nio-8080-exec-1] INFO  c.e.v.i.i.LoggingInterceptor - 📤 Response Sent: [PUT] /chairConfigs/1 - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 18:17:10 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 18:17:10 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 18:17:10 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:17:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 18:17:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 18:17:11 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 18:17:11 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 7054 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 18:17:11 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 18:17:11 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 18:17:11 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 18:17:11 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 18:17:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 18:17:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2025-04-01 18:17:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 18:17:12 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:17:12 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 18:17:12 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 18:17:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 18:17:12 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 421 ms
+2025-04-01 18:17:12 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 18:17:12 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 18:17:12 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 18:17:12 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 18:17:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 18:17:12 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c251ed7
+2025-04-01 18:17:12 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 18:17:12 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 18:17:12 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 18:17:12 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 18:17:12 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 18:17:12 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:17:12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 18:17:12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 18:17:12 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:17:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 18:17:12 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.29 seconds (process running for 1.498)
+2025-04-01 18:17:24 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 18:17:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 18:17:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-01 18:17:24 [http-nio-8080-exec-1] INFO  c.e.v.i.i.LoggingInterceptor - Request: [PUT] /chairConfigs/1 - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: b4da40a8-6d84-4a2d-8b51-b71f37a06fb2, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 75 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 18:17:24 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0 where cc1_0.chair_config_id=?
+2025-04-01 18:17:24 [http-nio-8080-exec-1] INFO  c.e.v.i.i.LoggingInterceptor - Response: [PUT] /chairConfigs/1 - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 18:18:58 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-01 18:18:58 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-01 18:18:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:18:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-01 18:18:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-01 18:18:59 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-04-01 18:18:59 [restartedMain] INFO  c.e.v.VinemasServerApplication - Starting VinemasServerApplication using Java 21.0.6 with PID 7066 (/Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server/target/classes started by phungvandung in /Users/phungvandung/Documents/Learn/Project/KLTN/vinemas/vinemas_server)
+2025-04-01 18:18:59 [restartedMain] DEBUG c.e.v.VinemasServerApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-01 18:18:59 [restartedMain] INFO  c.e.v.VinemasServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-01 18:18:59 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-01 18:18:59 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-01 18:19:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-01 18:19:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2025-04-01 18:19:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-01 18:19:00 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:19:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-01 18:19:00 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-01 18:19:00 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-01 18:19:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 581 ms
+2025-04-01 18:19:00 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-01 18:19:00 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-01 18:19:00 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-01 18:19:00 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-01 18:19:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-01 18:19:00 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3832358b
+2025-04-01 18:19:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-01 18:19:00 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-01 18:19:00 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-01 18:19:00 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-01 18:19:01 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-01 18:19:01 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-01 18:19:01 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-01 18:19:01 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-01 18:19:01 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-01 18:19:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-01 18:19:01 [restartedMain] INFO  c.e.v.VinemasServerApplication - Started VinemasServerApplication in 1.622 seconds (process running for 1.848)
+2025-04-01 18:19:05 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-01 18:19:05 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-01 18:19:05 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-01 18:19:05 [http-nio-8080-exec-3] INFO  c.e.v.i.i.LoggingInterceptor - Request: [PUT] /chairConfigs/1 - Headers: content-type: application/json, user-agent: PostmanRuntime/7.43.3, accept: */*, postman-token: 6eb60766-9090-43d3-894c-fabfbe7410e5, host: localhost:8080, accept-encoding: gzip, deflate, br, connection: keep-alive, content-length: 75 - Query Params:  - Body Params: EMPTY_BODY
+2025-04-01 18:19:05 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select cc1_0.chair_config_id,cc1_0.layout,cc1_0.row_count,cc1_0.seats_per_row from chair_configs cc1_0 where cc1_0.chair_config_id=?
+2025-04-01 18:19:06 [http-nio-8080-exec-3] INFO  c.e.v.i.i.LoggingInterceptor - Response: [PUT] /chairConfigs/1 - Status: 200 - Request Body: EMPTY_BODY - Response Body: EMPTY_BODY
+2025-04-01 18:52:43 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m12s962ms).
+2025-04-01 19:09:54 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m40s749ms).
+2025-04-01 19:26:02 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m37s769ms).
+2025-04-01 19:53:32 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m59s872ms).
+2025-04-01 20:11:28 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m25s734ms).
+2025-04-01 21:14:41 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m11s955ms).
