@@ -223,7 +223,7 @@ CREATE TABLE Cinema (
 ### 6.4 ChairConfig Table
 ```sql
 CREATE TABLE ChairConfig (
-  chair_config_id VARCHAR(50) PRIMARY KEY,
+  chair_config_id BIGINT PRIMARY KEY,
   layout VARCHAR(50),
   row_count INT(5),
   seats_per_row INT(5)
@@ -233,11 +233,11 @@ CREATE TABLE ChairConfig (
 ### 6.5 ChairType Table
 ```sql
 CREATE TABLE ChairType (
-  chair_config_id VARCHAR(50),
-  chair_type_id VARCHAR(50),
-  seat_row VARCHAR(50),
-  PRIMARY KEY (chair_config_id, chair_type_id, seat_row),
-  FOREIGN KEY (chair_config_id) REFERENCES ChairConfig(chair_config_id)
+    chair_type_id BIGINT PRIMARY KEY,
+    chair_config_id VARCHAR(50),
+    seat_row VARCHAR(5),
+    seat_type_name VARCHAR(50),
+    FOREIGN KEY (chair_config_id) REFERENCES ChairConfig(chair_config_id)
 );
 ```
 
