@@ -176,145 +176,144 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
-
 ## 6. Database Schema
 
 ### 6.1 Users Table
 ```sql
 CREATE TABLE Users (
-    user_auth_id VARCHAR(50) PRIMARY KEY,
-    avatar_url TEXT,
-    date_of_birth DATETIME,
-    email VARCHAR(255),
-    full_name VARCHAR(255),
-    gender INT(1),
-    phone_number VARCHAR(15),
-    address TEXT
+  user_auth_id VARCHAR(50) PRIMARY KEY,
+  avatar_url TEXT,
+  date_of_birth DATETIME,
+  email VARCHAR(255),
+  full_name VARCHAR(255),
+  gender TINYINT(1), -- 0: Male, 1: Female, 2: Other
+  phone_number VARCHAR(15),
+  address TEXT
 );
 ```
 
 ### 6.2 CinemaBand Table
 ```sql
 CREATE TABLE CinemaBand (
-    cinema_band_id VARCHAR(50) PRIMARY KEY,
-    name_cinema VARCHAR(255),
-    image_url TEXT,
-    open_date DATETIME,
-    close_date DATETIME,
-    description TEXT
+  cinema_band_id VARCHAR(50) PRIMARY KEY,
+  name_cinema VARCHAR(255),
+  image_url TEXT,
+  open_date DATETIME,
+  close_date DATETIME NULL,
+  description TEXT
 );
 ```
 
 ### 6.3 Cinema Table
 ```sql
 CREATE TABLE Cinema (
-    cinema_id VARCHAR(50) PRIMARY KEY,
-    cinema_band_id VARCHAR(50),
-    chair_config_id VARCHAR(50),
-    open_date DATETIME,
-    close_date DATETIME,
-    description TEXT,
-    name_cinema VARCHAR(255),
-    address TEXT,
-    FOREIGN KEY (cinema_band_id) REFERENCES CinemaBand(cinema_band_id),
-    FOREIGN KEY (chair_config_id) REFERENCES ChairConfig(chair_config_id)
+  cinema_id VARCHAR(50) PRIMARY KEY,
+  cinema_band_id VARCHAR(50),
+  chair_config_id VARCHAR(50),
+  open_date DATETIME,
+  close_date DATETIME NULL,
+  description TEXT,
+  name_cinema VARCHAR(255),
+  address TEXT,
+  FOREIGN KEY (cinema_band_id) REFERENCES CinemaBand(cinema_band_id),
+  FOREIGN KEY (chair_config_id) REFERENCES ChairConfig(chair_config_id)
 );
 ```
 
 ### 6.4 ChairConfig Table
 ```sql
 CREATE TABLE ChairConfig (
-    chair_config_id VARCHAR(50) PRIMARY KEY,
-    layout VARCHAR(50),
-    row_count INT(5),
-    seats_per_row INT(5)
+  chair_config_id VARCHAR(50) PRIMARY KEY,
+  layout VARCHAR(50),
+  row_count INT(5),
+  seats_per_row INT(5)
 );
 ```
 
 ### 6.5 ChairType Table
 ```sql
 CREATE TABLE ChairType (
-    chair_config_id VARCHAR(50),
-    chair_type_id VARCHAR(50),
-    seat_row VARCHAR(50),
-    PRIMARY KEY (chair_config_id, chair_type_id, seat_row),
-    FOREIGN KEY (chair_config_id) REFERENCES ChairConfig(chair_config_id)
+  chair_config_id VARCHAR(50),
+  chair_type_id VARCHAR(50),
+  seat_row VARCHAR(50),
+  PRIMARY KEY (chair_config_id, chair_type_id, seat_row),
+  FOREIGN KEY (chair_config_id) REFERENCES ChairConfig(chair_config_id)
 );
 ```
 
 ### 6.6 SessionMovie Table
 ```sql
 CREATE TABLE SessionMovie (
-    session_movie_id VARCHAR(50) PRIMARY KEY,
-    cinema_id VARCHAR(50),
-    movie_id VARCHAR(50),
-    start_date DATETIME,
-    end_date DATETIME,
-    description TEXT,
-    FOREIGN KEY (cinema_id) REFERENCES Cinema(cinema_id)
+  session_movie_id VARCHAR(50) PRIMARY KEY,
+  cinema_id VARCHAR(50),
+  movie_id VARCHAR(50),
+  start_date DATETIME,
+  end_date DATETIME,
+  description TEXT,
+  FOREIGN KEY (cinema_id) REFERENCES Cinema(cinema_id)
 );
 ```
 
 ### 6.7 ChairStatus Table
 ```sql
 CREATE TABLE ChairStatus (
-    session_movie_id VARCHAR(50),
-    seat_id VARCHAR(50),
-    status INT(1),
-    PRIMARY KEY (session_movie_id, seat_id),
-    FOREIGN KEY (session_movie_id) REFERENCES SessionMovie(session_movie_id)
+  session_movie_id VARCHAR(50),
+  seat_id VARCHAR(50),
+  status TINYINT(1), -- 0: Available, 1: Booked, 2: Reserved
+  PRIMARY KEY (session_movie_id, seat_id),
+  FOREIGN KEY (session_movie_id) REFERENCES SessionMovie(session_movie_id)
 );
 ```
 
 ### 6.8 SeatPrice Table
 ```sql
 CREATE TABLE SeatPrice (
-    session_movie_id VARCHAR(50),
-    seat_type VARCHAR(50),
-    price DECIMAL(15),
-    PRIMARY KEY (session_movie_id, seat_type),
-    FOREIGN KEY (session_movie_id) REFERENCES SessionMovie(session_movie_id)
+  session_movie_id VARCHAR(50),
+  seat_type VARCHAR(50),
+  price DECIMAL(15,2),
+  PRIMARY KEY (session_movie_id, seat_type),
+  FOREIGN KEY (session_movie_id) REFERENCES SessionMovie(session_movie_id)
 );
 ```
 
 ### 6.9 Ticket Table
 ```sql
 CREATE TABLE Ticket (
-    ticket_id VARCHAR(50) PRIMARY KEY,
-    session_movie_id VARCHAR(50),
-    total DECIMAL(15,2),
-    booking_time DATETIME,
-    content TEXT,
-    update_time DATETIME,
-    status INT(1),
-    FOREIGN KEY (session_movie_id) REFERENCES SessionMovie(session_movie_id)
+  ticket_id VARCHAR(50) PRIMARY KEY,
+  session_movie_id VARCHAR(50),
+  total DECIMAL(15,2),
+  booking_time DATETIME,
+  content TEXT,
+  update_time DATETIME,
+  status TINYINT(1), -- 0: Unpaid, 1: Paid, 2: Cancelled
+  FOREIGN KEY (session_movie_id) REFERENCES SessionMovie(session_movie_id)
 );
 ```
 
-### 6.10 TicketSeat
+### 6.10 TicketSeat Table
 ```sql
 CREATE TABLE TicketSeat (
-ticket_id VARCHAR(50),
-seat_id VARCHAR(50),
-PRIMARY KEY (ticket_id, seat_id),
-FOREIGN KEY (ticket_id) REFERENCES Ticket(ticket_id)
+  ticket_id VARCHAR(50),
+  seat_id VARCHAR(50),
+  PRIMARY KEY (ticket_id, seat_id),
+  FOREIGN KEY (ticket_id) REFERENCES Ticket(ticket_id)
 );
-``
+```
 
-## 6.11 Payment
+### 6.11 Payment Table
 ```sql
 CREATE TABLE Payment (
-payment_id VARCHAR(50) PRIMARY KEY,
-user_auth_id VARCHAR(50),
-ticket_id VARCHAR(50),
-payment_method INT(1),
-amount DECIMAL(15,2),
-created_at DATETIME,
-content TEXT,
-update_at DATETIME,
-payment_status INT(1),
-FOREIGN KEY (user_auth_id) REFERENCES Users(user_auth_id),
-FOREIGN KEY (ticket_id) REFERENCES Ticket(ticket_id)
+  payment_id VARCHAR(50) PRIMARY KEY,
+  user_auth_id VARCHAR(50),
+  ticket_id VARCHAR(50),
+  payment_method TINYINT(1), -- 0: Cash, 1: Credit Card, 2: E-Wallet
+  amount DECIMAL(15,2),
+  created_at DATETIME,
+  content TEXT,
+  update_at DATETIME,
+  payment_status TINYINT(1), -- 0: Pending, 1: Completed, 2: Failed
+  FOREIGN KEY (user_auth_id) REFERENCES Users(user_auth_id),
+  FOREIGN KEY (ticket_id) REFERENCES Ticket(ticket_id)
 );
 ```
 
