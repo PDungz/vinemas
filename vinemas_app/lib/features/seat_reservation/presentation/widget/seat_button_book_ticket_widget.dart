@@ -366,6 +366,7 @@ class SeatButtonBookTicketWidget extends StatelessWidget {
                     },
                   ),
                 ).paddingSymmetric(horizontal: 12),
+              const SizedBox(height: 16),
             ],
           ),
         ),

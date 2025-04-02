@@ -53,32 +53,37 @@ class _SessionCinemaRecommendWidgetState
           horizontalPadding: 0,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
-          leftWidget: CustomLayoutHorizontal(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            leftWidget: Container(
-              height: 36,
-              width: 36,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(
-                  color: AppColor.buttonLinerOneColor,
-                  width: 1.2,
-                ),
-                image: DecorationImage(
-                  image: NetworkImage(widget.cinemaBand.imageUrl ?? ''),
-                  fit: BoxFit.cover,
+          leftWidget: Expanded(
+            child: CustomLayoutHorizontal(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              leftWidget: Container(
+                height: 36,
+                width: 36,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: AppColor.buttonLinerOneColor,
+                    width: 1.2,
+                  ),
+                  image: DecorationImage(
+                    image: NetworkImage(widget.cinemaBand.imageUrl ?? ''),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-            rightWidget: CustomLayoutVertical(
-              topWidget: Text(
-                widget.cinema.nameCinema,
-                style: Theme.of(context).textTheme.titleSmall,
-              ),
-              bottomWidget: Text(
-                'Bạn ở gần đây',
-                overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodySmall,
+              rightWidget: Expanded(
+                child: CustomLayoutVertical(
+                  topWidget: Text(
+                    widget.cinema.nameCinema,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
+                  bottomWidget: Text(
+                    'Bạn ở gần đây',
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ),
               ),
             ),
           ),

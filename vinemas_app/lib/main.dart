@@ -14,7 +14,7 @@ import 'package:vinemas_app/l10n/generated/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  PaintingBinding.instance.imageCache.clear();
   await Firebase.initializeApp();
   await dotenv.load(fileName: '.env');
   await initDI();
