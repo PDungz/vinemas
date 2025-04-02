@@ -3,7 +3,6 @@ package com.example.vinemas_server.domain.model.chair_config;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
-import lombok.extern.java.Log;
 
 @Entity
 @Table(name = "ChairConfigs")
