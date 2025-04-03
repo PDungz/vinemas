@@ -156,9 +156,8 @@ class ChatBotBloc extends Bloc<ChatBotEvent, ChatBotState> {
   ) async {
     List<Content> chatHistory = [];
     String selectedLanguage =
-        event.context != null
-            ? AppLocalizations.of(event.context!)!.keyword_locale
-            : "en";
+        AppLocalizations.of(event.context!)!.keyword_local_language;
+    String language = AppLocalizations.of(event.context!)!.keyword_language;
     String searchImage =
         AppLocalizations.of(
           event.context!,
@@ -176,7 +175,7 @@ class ChatBotBloc extends Bloc<ChatBotEvent, ChatBotState> {
         Content(
           role: "user",
           parts: [
-            Part.text("Language: $selectedLanguage"),
+            Part.text("$language: $selectedLanguage"),
             Part.text("Question: $searchImage"),
             Part.text(
               "Find the nearest showtime and cinema for this movie: $jsonResult",
@@ -213,7 +212,7 @@ class ChatBotBloc extends Bloc<ChatBotEvent, ChatBotState> {
           Content(
             role: "user",
             parts: [
-              Part.text("Language: $selectedLanguage"),
+              Part.text("$language: $selectedLanguage"),
               Part.text(extraInfo),
               Part.text(event.message.text),
             ],
@@ -224,7 +223,7 @@ class ChatBotBloc extends Bloc<ChatBotEvent, ChatBotState> {
           Content(
             role: "user",
             parts: [
-              Part.text("Language: $selectedLanguage"),
+              Part.text("$language: $selectedLanguage"),
               Part.text(event.message.text),
             ],
           ),
