@@ -17,6 +17,7 @@ abstract class PaymentRepository {
   Future<Payment> refundTicket({
     required int amount,
     required String currency,
+    required Payment payment,
     required PayMethodEnum paymentMethod,
     required Ticket ticket,
   });

@@ -6,6 +6,7 @@ import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:vinemas_app/core/config/app_url.dart';
 import 'package:vinemas_app/core/service/logger_service.dart';
 import 'package:vinemas_app/features/pay/data/model/payment_model.dart';
+import 'package:vinemas_app/features/pay/domain/entity/payment.dart';
 import 'package:vinemas_app/features/pay/domain/enum/pay_enum.dart';
 import 'package:vinemas_app/features/ticket/domain/entity/ticket.dart';
 
@@ -24,6 +25,7 @@ abstract class PaymentRemoteDataSource {
   Future<PaymentModel> refundTicket({
     required int amount,
     required String currency,
+    required Payment payment,
     required PayMethodEnum paymentMethod,
     required Ticket ticket,
   });
@@ -35,7 +37,7 @@ class PaymentRemoteDataSourceImpl implements PaymentRemoteDataSource {
 
   final Dio _dio = Dio(
     BaseOptions(
-      baseUrl: AppUrl.urlPay,
+      baseUrl: AppUrl.urlPay + AppUrl.versionPayApi,
       connectTimeout: const Duration(seconds: 10),
       receiveTimeout: const Duration(seconds: 10),
       headers: {
@@ -54,7 +56,7 @@ class PaymentRemoteDataSourceImpl implements PaymentRemoteDataSource {
   }) async {
     try {
       final response = await _dio.post(
-        AppUrl.urlPay,
+        AppUrl.urlPayINTENT,
         data: {"amount": amount, "currency": currency},
         options: Options(
           contentType: Headers.formUrlEncodedContentType,
@@ -71,6 +73,7 @@ class PaymentRemoteDataSourceImpl implements PaymentRemoteDataSource {
       }
 
       final String clientSecret = response.data['client_secret'];
+      final String paymentIntentId = response.data['id']; // Lấy ID từ Stripe
 
       await Stripe.instance.initPaymentSheet(
         paymentSheetParameters: SetupPaymentSheetParameters(
@@ -87,37 +90,36 @@ class PaymentRemoteDataSourceImpl implements PaymentRemoteDataSource {
         throw Exception("User authentication failed.");
       }
 
-      // Tạo bill thanh toán sau khi hoàn tất
+      // Tạo bill thanh toán
       PaymentModel paymentModel = PaymentModel(
-        paymentId: '', // Firebase sẽ cập nhật ID sau
+        paymentId: paymentIntentId, // Dùng luôn ID từ Stripe
         userAuthId: userAuthId,
         ticketId: ticket.ticketId,
         paymentMethod: paymentMethod,
         paymentStatus: PayStatusEnum.completed,
         content: 'Payment successful',
-        // Nội dung thanh toán
         updateAt: Timestamp.now().toDate(),
         createdAt: Timestamp.now().toDate(),
       );
 
-      // Lưu vào Firestore và lấy Document ID
-      DocumentReference docRef = await _firestore
+      // Lưu vào Firestore với ID là paymentIntentId
+      DocumentReference docRef = _firestore
           .collection('payment')
-          .add(paymentModel.toMap());
-
-      // Cập nhật ID vào model
-      PaymentModel savedPayment = paymentModel.copyWith(paymentId: docRef.id);
+          .doc(paymentIntentId);
+      await docRef.set(paymentModel.toMap());
 
       printS(
-        "Payment successful and saved to Firestore: ${savedPayment.paymentId}",
+        "Payment successful and saved to Firestore: ${paymentModel.paymentId}",
       );
 
-      return savedPayment; // Trả về đối tượng PaymentModel đã được lưu
+      return paymentModel;
     } catch (e) {
       printE("Unexpected Error: $e");
       throw Exception("Unexpected payment error: $e");
     }
   }
+
+
 
   @override
   Future<PaymentModel?> getPayment({required String paymentId}) async {
@@ -176,10 +178,36 @@ class PaymentRemoteDataSourceImpl implements PaymentRemoteDataSource {
   Future<PaymentModel> refundTicket({
     required int amount,
     required String currency,
+    required Payment payment, // Payment từ Firestore chứa Stripe Payment ID
     required PayMethodEnum paymentMethod,
     required Ticket ticket,
   }) async {
     try {
+      // Kiểm tra Payment ID hợp lệ
+      if (payment.paymentId.isEmpty) {
+        throw Exception("Invalid payment ID. Refund cannot be processed.");
+      }
+
+      // Gửi yêu cầu hoàn tiền đến Stripe
+      final response = await _dio.post(
+        AppUrl.urlPayRefund,
+        data: {'payment_intent': payment.paymentId, 'amount': amount},
+        options: Options(
+          contentType: Headers.formUrlEncodedContentType,
+          headers: {
+            'Authorization': 'Bearer ${AppUrl.secretKey}',
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        ),
+      );
+
+      if (response.data == null || response.data['id'] == null) {
+        printE("Refund failed: Invalid response from Stripe.");
+        throw Exception("Invalid response from Stripe refund API.");
+      }
+
+      final String refundId = response.data['id']; // Lấy Refund ID từ Stripe
+
       // Lấy thông tin user
       final String userAuthId = _auth.currentUser?.uid ?? '';
       if (userAuthId.isEmpty) {
@@ -187,35 +215,36 @@ class PaymentRemoteDataSourceImpl implements PaymentRemoteDataSource {
         throw Exception("User authentication failed.");
       }
 
-      // Tạo bill hoàn tiền sau khi hoàn tất
-      PaymentModel paymentModel = PaymentModel(
-        paymentId: '', // Firebase sẽ cập nhật ID sau
+      // Tạo bill hoàn tiền
+      PaymentModel refundModel = PaymentModel(
+        paymentId: refundId, // Sử dụng Refund ID từ Stripe
         userAuthId: userAuthId,
         ticketId: ticket.ticketId,
         paymentMethod: paymentMethod,
         paymentStatus: PayStatusEnum.refunded,
         content: 'Refund successful',
-        // Nội dung hoàn tiền
         updateAt: Timestamp.now().toDate(),
         createdAt: Timestamp.now().toDate(),
       );
 
-      // Lưu vào Firestore và lấy Document ID
-      DocumentReference docRef = await _firestore
+      // Lưu vào Firestore
+      DocumentReference docRef = _firestore
           .collection('payment')
-          .add(paymentModel.toMap());
+          .doc(refundId);
+      await docRef.set(refundModel.toMap());
 
-      // Cập nhật ID vào model
-      PaymentModel savedPayment = paymentModel.copyWith(paymentId: docRef.id);
+      // Cập nhật ID Firestore vào model
+      PaymentModel savedPayment = refundModel.copyWith(paymentId: docRef.id);
 
       printS(
-        "Payment successful and saved to Firestore: ${savedPayment.paymentId}",
+        "Refund successful and saved to Firestore: ${savedPayment.paymentId}",
       );
 
-      return savedPayment; // Trả về đối tượng PaymentModel đã được lưu
+      return savedPayment;
     } catch (e) {
-      printE("Unexpected Error: $e");
-      throw Exception("Unexpected payment error: $e");
+      printE("Unexpected Refund Error: $e");
+      throw Exception("Unexpected refund error: $e");
     }
   }
+
 }

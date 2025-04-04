@@ -38,12 +38,14 @@ class PaymentRepositoryImpl implements PaymentRepository {
   Future<Payment> refundTicket({
     required int amount,
     required String currency,
+    required Payment payment,
     required PayMethodEnum paymentMethod,
     required Ticket ticket,
   }) async {
     return await paymentRemoteDataSource.refundTicket(
       amount: amount,
       currency: currency,
+      payment: payment,
       paymentMethod: paymentMethod,
       ticket: ticket,
     );

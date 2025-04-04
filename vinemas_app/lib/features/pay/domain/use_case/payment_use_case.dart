@@ -34,12 +34,14 @@ class PaymentUseCase {
   Future<Payment> refundTicket({
     required int amount,
     required String currency,
+    required Payment payment,
     required PayMethodEnum paymentMethod,
     required Ticket ticket,
   }) async {
     return await paymentRepository.refundTicket(
       amount: amount,
       currency: currency,
+      payment: payment,
       paymentMethod: paymentMethod,
       ticket: ticket,
     );

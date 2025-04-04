@@ -110,9 +110,15 @@ class PayBloc extends Bloc<PayEvent, PayState> {
         bookedTime: event.ticketModel.bookedTime,
       );
 
+      final payments = await getIt<PaymentUseCase>().getUserPaymentTicket();
+      final payment = payments.firstWhereOrNull(
+        (element) => element?.ticketId == ticketModel.ticketId,
+      );
+
       await getIt<PaymentUseCase>().refundTicket(
         amount: event.amount,
         currency: event.currency,
+        payment: payment!,
         paymentMethod: event.payMethodEnum,
         ticket: ticketModel,
       );

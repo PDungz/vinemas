@@ -6,6 +6,9 @@ class AppUrl {
 
   // API PAY
   static String get urlPay => dotenv.env['URL_PAY'] ?? '';
+  static String get versionPayApi => dotenv.env['API_PAY_VERSION'] ?? '';
+  static String get urlPayINTENT => dotenv.env['URL_PAY_INTENT'] ?? '';
+  static String get urlPayRefund => dotenv.env['URL_PAY_REFUND'] ?? '';
   static String get publishableKey => dotenv.env['PUBLISHABLE_KEY'] ?? '';
   static String get secretKey => dotenv.env['SECRET_KEY'] ?? '';
 
