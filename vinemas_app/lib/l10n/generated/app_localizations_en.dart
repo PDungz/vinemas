@@ -417,6 +417,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get keyword_chatbot_movie_info_by_image => 'Identify movie from image and display movie details, including title, genre, duration, release date, cast, director, and synopsis.';
 
   @override
+  String get keyword_refund_with_stripe => 'The refund process via Stripe has been completed. You will receive the refunded amount within a few business days, depending on your payment method.';
+
+  @override
+  String get keyword_refund_failed_with_stripe => 'The refund process via Stripe has failed. Please try again later or contact customer support for assistance.';
+
+  @override
+  String get keyword_payment_success => 'Your payment was successful. Thank you for using our service.';
+
+  @override
+  String get keyword_payment_failed => 'Payment failed. Please check your payment details and try again.';
+
+  @override
   String get error_validate => 'ERROR_validate';
 
   @override

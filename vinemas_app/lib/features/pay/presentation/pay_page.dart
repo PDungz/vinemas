@@ -7,6 +7,7 @@ import 'package:packages/widget/Button/custom_button.dart';
 import 'package:packages/widget/Layout/custom_layout.dart';
 import 'package:packages/widget/Layout/custom_layout_label_value.dart';
 import 'package:packages/widget/Shadow/custom_shadow.dart';
+import 'package:packages/widget/Snackbar/custom_snackbar.dart';
 import 'package:vinemas_app/core/common/enum/process_status.dart';
 import 'package:vinemas_app/core/config/app_router.dart';
 import 'package:vinemas_app/core/config/app_url.dart';
@@ -23,6 +24,7 @@ import 'package:vinemas_app/features/pay/presentation/widget/pay_method_widget.d
 import 'package:vinemas_app/features/pay/presentation/widget/pay_tear_line_widget.dart';
 import 'package:vinemas_app/features/ticket/data/model/ticket_model.dart';
 import 'package:vinemas_app/features/ticket/domain/enum/ticket_status_enum.dart';
+import 'package:vinemas_app/gen/assets.gen.dart';
 import 'package:vinemas_app/l10n/generated/app_localizations.dart';
 
 class PayPage extends StatefulWidget {
@@ -124,6 +126,33 @@ class _PayPageState extends State<PayPage> {
                 listener: (context, state) {
                   if (state is PaymentTicketState &&
                       state.processStatus == ProcessStatus.success) {
+                    CustomSnackbar.show(
+                      title: 'Notification',
+                      message:
+                          state.processStatus == ProcessStatus.success
+                              ? AppLocalizations.of(
+                                context,
+                              )!.keyword_payment_success
+                              : AppLocalizations.of(
+                                context,
+                              )!.keyword_payment_failed,
+                      iconPath: $AssetsIconsGen().iconApp.bell,
+                      iconColor: AppColor.primaryTextColor,
+                      backgroundColor:
+                          state.processStatus == ProcessStatus.success
+                              ? Colors.green
+                              : Colors.red,
+                      snackPosition:
+                          SnackPosition.TOP, // Hiển thị từ trên xuống
+                      margin: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 20,
+                      ),
+                      borderRadius: 10,
+                      duration: const Duration(seconds: 5),
+                      isDismissible: true,
+                      forwardAnimationCurve: Curves.easeOutBack,
+                    ); 
                     Get.toNamed(
                       ConfigRoute.ticketDetailPage,
                       arguments: [

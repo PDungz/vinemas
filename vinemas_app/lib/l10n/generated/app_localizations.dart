@@ -911,6 +911,30 @@ abstract class AppLocalizations {
   /// **'Identify movie from image and display movie details, including title, genre, duration, release date, cast, director, and synopsis.'**
   String get keyword_chatbot_movie_info_by_image;
 
+  /// No description provided for @keyword_refund_with_stripe.
+  ///
+  /// In en, this message translates to:
+  /// **'The refund process via Stripe has been completed. You will receive the refunded amount within a few business days, depending on your payment method.'**
+  String get keyword_refund_with_stripe;
+
+  /// No description provided for @keyword_refund_failed_with_stripe.
+  ///
+  /// In en, this message translates to:
+  /// **'The refund process via Stripe has failed. Please try again later or contact customer support for assistance.'**
+  String get keyword_refund_failed_with_stripe;
+
+  /// No description provided for @keyword_payment_success.
+  ///
+  /// In en, this message translates to:
+  /// **'Your payment was successful. Thank you for using our service.'**
+  String get keyword_payment_success;
+
+  /// No description provided for @keyword_payment_failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment failed. Please check your payment details and try again.'**
+  String get keyword_payment_failed;
+
   /// No description provided for @error_validate.
   ///
   /// In en, this message translates to:

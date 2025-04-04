@@ -417,6 +417,18 @@ class AppLocalizationsVi extends AppLocalizations {
   String get keyword_chatbot_movie_info_by_image => 'Nhận diện phim qua hình ảnh và hiển thị thông tin phim, bao gồm tên, thể loại, thời lượng, ngày phát hành, diễn viên, đạo diễn và tóm tắt nội dung.';
 
   @override
+  String get keyword_refund_with_stripe => 'Quá trình hoàn tiền qua Stripe đã được thực hiện. Bạn sẽ nhận được số tiền hoàn lại trong vài ngày làm việc tùy vào phương thức thanh toán của bạn.';
+
+  @override
+  String get keyword_refund_failed_with_stripe => 'Quá trình hoàn tiền qua Stripe đã thất bại. Vui lòng thử lại sau hoặc liên hệ với bộ phận hỗ trợ khách hàng để được trợ giúp.';
+
+  @override
+  String get keyword_payment_success => 'Thanh toán của bạn đã thành công. Cảm ơn bạn đã sử dụng dịch vụ.';
+
+  @override
+  String get keyword_payment_failed => 'Thanh toán không thành công. Vui lòng kiểm tra thông tin thanh toán và thử lại.';
+
+  @override
   String get error_validate => 'LỖI_XÁC_THỰC';
 
   @override

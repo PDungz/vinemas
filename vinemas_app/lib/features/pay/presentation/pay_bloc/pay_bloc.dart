@@ -129,12 +129,12 @@ class PayBloc extends Bloc<PayEvent, PayState> {
           status: TicketStatus.cancelled,
         ),
         onPressed: ({required message, required status}) {
-          emit(
-            PaymentTicketState(
-              processStatus: ProcessStatus.success,
-              message: message,
-            ),
-          );
+          // emit(
+          //   PaymentTicketState(
+          //     processStatus: ProcessStatus.success,
+          //     message: message,
+          //   ),
+          // );
         },
       );
 
@@ -148,6 +148,12 @@ class PayBloc extends Bloc<PayEvent, PayState> {
 
       await getIt<SessionUseCase>().updateSessionMovie(
         sessionMovie: sessionMovie,
+      );
+      emit(
+        PaymentTicketState(
+          processStatus: ProcessStatus.success,
+          message: "",
+        ),
       );
     } catch (e) {
       printE("Error: $e");

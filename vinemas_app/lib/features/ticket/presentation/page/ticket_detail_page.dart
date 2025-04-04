@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:packages/widget/Button/custom_button.dart';
 import 'package:packages/widget/Dialog/custom_dialog.dart';
 import 'package:packages/widget/Layout/custom_layout.dart';
+import 'package:packages/widget/Snackbar/custom_snackbar.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:vinemas_app/core/common/enum/process_status.dart';
 import 'package:vinemas_app/core/config/app_color.dart';
@@ -73,6 +74,32 @@ class _TicketDetailPageState extends State<TicketDetailPage> {
             listener: (context, state) {
               if (state is PaymentTicketState &&
                   state.processStatus == ProcessStatus.success) {
+                CustomSnackbar.show(
+                  title: 'Notification',
+                  message:
+                      state.processStatus == ProcessStatus.success
+                          ? AppLocalizations.of(
+                            context,
+                          )!.keyword_refund_with_stripe
+                          : AppLocalizations.of(
+                            context,
+                          )!.keyword_refund_failed_with_stripe,
+                  iconPath: $AssetsIconsGen().iconApp.bell,
+                  iconColor: AppColor.primaryTextColor,
+                  backgroundColor:
+                      state.processStatus == ProcessStatus.success
+                          ? Colors.green
+                          : Colors.red,
+                  snackPosition: SnackPosition.TOP, // Hiển thị từ trên xuống
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 20,
+                  ),
+                  borderRadius: 10,
+                  duration: const Duration(seconds: 5),
+                  isDismissible: true,
+                  forwardAnimationCurve: Curves.easeOutBack,
+                );    
                 Get.toNamed(ConfigRoute.homePage);
               }
             },

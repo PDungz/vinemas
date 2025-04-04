@@ -44,17 +44,17 @@ class _PayMethodWidgetState extends State<PayMethodWidget> {
           onChanged: widget.onSelectedMethod,
         ),
         // MasterCard
-        CustomRadio<PayMethodEnum>(
-          value: PayMethodEnum.eWallet,
-          groupValue: widget.selectedMethod,
-          label: "VN pay",
-          iconPath: $AssetsIconsLogoPayGen().masterCardLogo,
-          iconColor: AppColor.primaryIconColor,
-          activeColor: AppColor.buttonLinerOneColor,
-          textColor: AppColor.primaryIconColor,
-          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 4),
-          onChanged: widget.onSelectedMethod,
-        ),
+        // CustomRadio<PayMethodEnum>(
+        //   value: PayMethodEnum.eWallet,
+        //   groupValue: widget.selectedMethod,
+        //   label: "VN pay",
+        //   iconPath: $AssetsIconsLogoPayGen().masterCardLogo,
+        //   iconColor: AppColor.primaryIconColor,
+        //   activeColor: AppColor.buttonLinerOneColor,
+        //   textColor: AppColor.primaryIconColor,
+        //   padding: EdgeInsets.symmetric(horizontal: 0, vertical: 4),
+        //   onChanged: widget.onSelectedMethod,
+        // ),
       ],
     );
   }
