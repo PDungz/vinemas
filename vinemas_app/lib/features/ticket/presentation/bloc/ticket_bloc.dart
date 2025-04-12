@@ -186,6 +186,7 @@ class TicketBloc extends Bloc<TicketEvent, TicketState> {
     try {
       emit(ChangeTicketState(processStatus: ProcessStatus.loading));
 
+      // Lấy tất cả session hiện có
       List<SessionMovie> sessionMovies = [];
       await getIt<SessionUseCase>().getSessionMovie(
         onPressed: ({
@@ -197,21 +198,7 @@ class TicketBloc extends Bloc<TicketEvent, TicketState> {
         },
       );
 
-      final sessionOld = sessionMovies.firstWhere(
-        (element) => element.sessionMovieId == event.ticketModel.sessionId,
-      );
-
-      Map<String, ChairStatus> chairStatus = Map.from(sessionOld.chairStatuses)
-        ..removeWhere((key, value) => event.ticketModel.seats.contains(key));
-
-      SessionMovie sessionMovieOld = sessionOld.copyWith(
-        chairStatuses: chairStatus,
-      );
-
-      await getIt<SessionUseCase>().updateSessionMovie(
-        sessionMovie: sessionMovieOld,
-      );
-
+      // Cập nhật lại ticket
       TicketModel ticketModel = event.ticketModel.copyWith(
         sessionId: event.sessionMovie.sessionMovieId,
         seats: event.seats,
@@ -221,31 +208,80 @@ class TicketBloc extends Bloc<TicketEvent, TicketState> {
         updateTime: DateTime.now(),
       );
 
+      // Cập nhật vé trước
       await getIt<TicketUseCase>().updateBookTicket(
         ticket: ticketModel,
         onPressed: ({required message, required status}) {
           emit(
             ChangeTicketState(
               processStatus: ProcessStatus.success,
+              ticketModel: ticketModel,
               message: message,
             ),
           );
         },
       );
 
-      Map<String, ChairStatus> chairStatusNew = Map.from(
-        event.sessionMovie.chairStatuses,
-      );
-      for (String seat in event.seats) {
-        chairStatusNew[seat] = ChairStatus.booked;
-      }
+      if (event.ticketModel.sessionId == event.sessionMovie.sessionMovieId) {
+        // ✅ Trường hợp đổi vé nhưng cùng suất chiếu
+        Map<String, ChairStatus> chairStatus = Map.from(
+          event.sessionMovie.chairStatuses,
+        );
 
-      SessionMovie sessionMovieNew = event.sessionMovie.copyWith(
-        chairStatuses: chairStatusNew,
-      );
-      await getIt<SessionUseCase>().updateSessionMovie(
-        sessionMovie: sessionMovieNew,
-      );
+        // Xóa ghế cũ
+        for (String seat in event.ticketModel.seats) {
+          chairStatus.remove(seat);
+        }
+
+        // Đánh dấu ghế mới là đã đặt
+        for (String seat in event.seats) {
+          chairStatus[seat] = ChairStatus.booked;
+        }
+
+        // Cập nhật lại session
+        SessionMovie updatedSession = event.sessionMovie.copyWith(
+          chairStatuses: chairStatus,
+        );
+
+        await getIt<SessionUseCase>().updateSessionMovie(
+          sessionMovie: updatedSession,
+        );
+      } else {
+        // ✅ Trường hợp đổi vé sang suất chiếu khác
+
+        // Cập nhật session cũ: bỏ ghế đã đặt
+        final sessionOld = sessionMovies.firstWhere(
+          (element) => element.sessionMovieId == event.ticketModel.sessionId,
+        );
+
+        Map<String, ChairStatus> chairStatusOld = Map.from(
+          sessionOld.chairStatuses,
+        )..removeWhere((key, value) => event.ticketModel.seats.contains(key));
+
+        SessionMovie sessionMovieOld = sessionOld.copyWith(
+          chairStatuses: chairStatusOld,
+        );
+
+        await getIt<SessionUseCase>().updateSessionMovie(
+          sessionMovie: sessionMovieOld,
+        );
+
+        // Cập nhật session mới: đặt ghế mới
+        Map<String, ChairStatus> chairStatusNew = Map.from(
+          event.sessionMovie.chairStatuses,
+        );
+        for (String seat in event.seats) {
+          chairStatusNew[seat] = ChairStatus.booked;
+        }
+
+        SessionMovie sessionMovieNew = event.sessionMovie.copyWith(
+          chairStatuses: chairStatusNew,
+        );
+
+        await getIt<SessionUseCase>().updateSessionMovie(
+          sessionMovie: sessionMovieNew,
+        );
+      }
     } catch (e) {
       printE("Error: $e");
       emit(

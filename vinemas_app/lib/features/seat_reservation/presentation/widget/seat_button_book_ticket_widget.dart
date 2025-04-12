@@ -235,7 +235,7 @@ class SeatButtonBookTicketWidget extends StatelessWidget {
                               isDismissible: true,
                               forwardAnimationCurve: Curves.easeOutBack,
                             );
-                            Get.toNamed(
+                            Get.offAndToNamed(
                               ConfigRoute.ticketDetailPage,
                               arguments: [
                                 movieDetail,
@@ -245,7 +245,7 @@ class SeatButtonBookTicketWidget extends StatelessWidget {
                                 cinema,
                                 chairConfig,
                                 true,
-                                ticketModel,
+                                state.ticketModel,
                               ],
                             );
                             CustomSnackbar.show(
@@ -307,7 +307,7 @@ class SeatButtonBookTicketWidget extends StatelessWidget {
                                 );
                               } else {
                                 if (currentPrice - ticketModel.totalPrice > 0) {
-                                  Get.toNamed(
+                                  Get.offAndToNamed(
                                     ConfigRoute.payPage,
                                     arguments: [
                                       movieDetail,

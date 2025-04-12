@@ -126,22 +126,26 @@ class SeatMovieTicketState extends TicketState {
 
 class ChangeTicketState extends TicketState {
   final ProcessStatus processStatus;
+  final TicketModel? ticketModel;
   final String? message;
 
   ChangeTicketState({
     this.processStatus = ProcessStatus.idle,
+    this.ticketModel,
     this.message,
   });
 
   @override
-  List<Object?> get props => [processStatus, message];
+  List<Object?> get props => [processStatus, ticketModel, message];
 
   ChangeTicketState copyWith({
     ProcessStatus? processStatus,
+    TicketModel? ticketModel,
     String? message,
   }) {
     return ChangeTicketState(
       processStatus: processStatus ?? this.processStatus,
+      ticketModel: ticketModel ?? this.ticketModel,
       message: message ?? this.message,
     );
   }

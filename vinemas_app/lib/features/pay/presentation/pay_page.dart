@@ -153,7 +153,7 @@ class _PayPageState extends State<PayPage> {
                       isDismissible: true,
                       forwardAnimationCurve: Curves.easeOutBack,
                     ); 
-                    Get.toNamed(
+                    Get.offNamed(
                       ConfigRoute.ticketDetailPage,
                       arguments: [
                         movieDetail,
